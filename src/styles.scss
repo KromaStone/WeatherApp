@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+* {
+
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Nunito", sans-serif;
+    line-height: 2rem;
+}
+
+
+html {}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}

@@ -1,0 +1,167 @@
+.left-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .6rem;
+}
+
+.left-container-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.search-icon {
+    flex: 1;
+    text-align: center;
+    color: black;
+}
+
+.search-input input {
+    flex: 4;
+    border: none;
+    padding: 6px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.search-input input:hover,
+.search-input input:active {
+    border-bottom: 1px solid red;
+}
+
+.location-icon {
+    flex: 2;
+    text-align: center;
+}
+
+.location-icon fa-icon {
+    padding: 2px 5px;
+    background-color: #f6f6f8;
+    border-radius: 10rem;
+}
+
+
+.left-container-data-box {
+    flex: 12;
+    margin: 0 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container-temp-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left-container-temp-img {
+    flex: 2;
+    width: 88%;
+    margin: 1rem 0;
+}
+
+.left-container-temp-img img {
+    width: 14rem;
+}
+
+.left-container-temp-value {
+    flex: 1;
+    font-size: 5rem;
+    font-weight: 500;
+    margin-top: .6rem;
+
+}
+
+.left-container-temp-value sup {
+    position: relative;
+    top: -0.2rem;
+    font-size: 2rem;
+}
+
+.left-container-day-time {
+    flex: 1;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: black;
+        margin: 0;
+        margin-top: 2rem ;
+}
+
+.left-container-day-time span {
+    color: #c9c9c9;
+    font-size: 1.8rem;
+}
+
+
+.left-container-other-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container-temp-summery {
+    flex: 1;
+    display: flex;
+    font-size: 1.4rem;
+}
+
+.left-container-rain-stats {
+ height: 3rem;
+    font-size: 1.4rem;
+        display: flex;
+}
+
+.left-container-location-details {
+    flex: 3;
+    text-align: center;
+
+}
+
+.left-container-location-img img {
+    height: 160px;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.left-container-location-name {
+    margin-top: -90px;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+
+.deviding-line {
+    height: 1px;
+    width: 100%;
+    background-color: #cccccc;
+    margin: 2rem 0;
+}
+
+.left-container-temp-summery-img {
+    margin-right: 8px;
+}
+
+.left-container-rain-stats-value {}
+
+.left-container-rain-stats-img {
+    margin-right: 8px;
+}
+
+
+
+///////////////////////////--------------------------------------------------------------
+
+
+
+
+
+
+
+
+.left-container-temp-img[_ngcontent-ng-c3306631031] img[_ngcontent-ng-c3306631031] {
+    width: 12rem;
+}

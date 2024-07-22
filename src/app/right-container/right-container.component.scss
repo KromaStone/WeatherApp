@@ -1,0 +1,340 @@
+.right-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-conainter-nav-bar {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+// nabar tab
+.navbar-tabs {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-top: 10px;
+}
+
+// today ----------------------
+.today {
+    margin-right: 10px;
+    color: #c5c5c5;
+}
+
+.today:hover {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.today-active {
+    color: #1a1a1a;
+}
+
+// week ----------------------
+.week {
+    color: #c5c5c5;
+}
+
+.week:hover {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+.week-active {
+    color: #1a1a1a;
+}
+
+// underline ----------------------
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: #1a1a1a;
+    margin-top: 1.5rem;
+}
+
+.underline-today {
+    transform: translate3d(-200%, 0, 0);
+    transition: 100ms;
+}
+
+.underline-week {
+    transform: translate3d(-90%, 0, 0);
+    transition: 100ms;
+}
+
+.navbar-matric {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.celsius {
+    border-radius: 500px;
+    padding: 0px 10px;
+    color: #1a1a1a;
+    background-color: #ffff;
+    font-size: small;
+}
+
+.celsius:hover {
+    background-color: #1a1a1a;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.celsius-active {
+    background-color: #1a1a1a;
+    color: #ffff;
+}
+
+.fahrenheit {
+    margin-left: 10px;
+    border-radius: 500px;
+    padding: 0px 10px;
+    color: #1a1a1a;
+    background-color: #ffff;
+    font-size: small;
+}
+
+.fahrenheit:hover {
+    background-color: #1a1a1a;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.fahrenheit-active {
+    background-color: #1a1a1a;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.profile-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 8px 20px 0 20px;
+}
+
+
+.right-container-data-box {
+    flex: 12;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 30px 30px;
+}
+
+.right-container-week-cards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.card {
+    width: 100px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: 500;
+}
+
+.card-temp-img {
+    top: -4px;
+    height: 56px;
+    position: relative;
+}
+
+.card-temp-img img {
+    width: 56px;
+    // height: 40px;
+}
+
+.right-container-today-cards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+.right-container-today-heighlight {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.right-container-today-heighlight-title {
+    flex: 1;
+    margin: 10px 0;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.right-container-today-heighlight-cards {
+    flex: 8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // justify-content: center;
+    // align-items: center;
+    gap: .6rem;
+
+}
+
+.right-container-today-heighlight-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.right-container-today-heighlight-card-title {
+    flex: 1;
+    width: 100%;
+    color: #c9c9c9;
+    text-align: start;
+
+}
+
+.gauge {
+    flex: 2;
+    width: 50%;
+    max-width: 200px;
+    font-size: 32px;
+    color: rgb(65, 65, 65);
+    font-weight: 500;
+}
+
+.gauge_body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background-color: #f3f3f4;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.gauge_fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background-color: #ffbf5e;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform .2s ease-out;
+}
+
+.gauge_cover {
+    width: 75%;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: #ffff;
+}
+
+.right-container-today-heighlight-card-value {
+    flex: 1;
+}
+
+.wind-status-value {
+    flex: 2;
+    font-size: 3rem;
+}
+
+.wind-status-logo {
+    flex: 1;
+}
+
+.wind-status-logo img {
+    width: 6rem;
+}
+
+.sunrise-sunset-value {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sunrise {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+        align-items: center;
+}
+
+.sunset {
+    flex: 1;
+    display: flex;justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+
+.sunrise-img {
+    flex: 1;
+    
+}
+
+.sunrise-img img {
+    width: 30px;
+}
+
+.sunrise-time {
+    flex: 4;
+}
+
+.sunset-img {
+    flex: 1;
+}
+.sunset-img img {
+    width: 30px;
+}
+
+.sunset-time {
+    flex: 4;
+}
+
+.title-value{
+    font-size: 3rem;
+}
