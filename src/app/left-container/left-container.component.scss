@@ -3,37 +3,44 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 .6rem;
+    padding: 2rem 2.6rem;
+    overflow: scroll;
+    justify-content: space-between;
+
 }
 
 .left-container-navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.2rem;
+    /* margin-top: 1.2rem; */
+    justify-content: space-around;
 }
 
 .search-icon {
-    flex: 1;
+    // flex: 1;
     text-align: center;
     color: black;
 }
 
 .search-input input {
-    flex: 4;
+    // flex: 4;
     border: none;
     padding: 6px;
     font-size: 1.2rem;
+    border-bottom: 1px solid white;
     color: black;
+
 }
 
 .search-input input:hover,
 .search-input input:active {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid black;
+    transition: all .6s ease-in-out;
 }
 
 .location-icon {
-    flex: 2;
+    // flex: 2;
     text-align: center;
 }
 
@@ -45,21 +52,21 @@
 
 
 .left-container-data-box {
-    flex: 12;
+    // flex: 12;
     margin: 0 1.2rem;
     display: flex;
     flex-direction: column;
 }
 
 .left-container-temp-data {
-    flex: 1;
+    // flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 
 .left-container-temp-img {
-    flex: 2;
+    // flex: 2;
     width: 88%;
     margin: 1rem 0;
 }
@@ -69,10 +76,9 @@
 }
 
 .left-container-temp-value {
-    flex: 1;
+    // flex: 1;
     font-size: 5rem;
     font-weight: 500;
-    margin-top: .6rem;
 
 }
 
@@ -83,69 +89,86 @@
 }
 
 .left-container-day-time {
-    flex: 1;
-        font-weight: 500;
-        font-size: 1.6rem;
-        color: black;
-        margin: 0;
-        margin-top: 2rem ;
+    // flex: 1;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+    margin-top: .8rem;
 }
 
 .left-container-day-time span {
     color: #c9c9c9;
-    font-size: 1.8rem;
 }
 
 
 .left-container-other-details {
-    flex: 1;
+    // flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .left-container-temp-summery {
-    flex: 1;
+    // flex: 1;
     display: flex;
     font-size: 1.4rem;
+    height: 2rem;
 }
 
 .left-container-rain-stats {
- height: 3rem;
     font-size: 1.4rem;
         display: flex;
+        /* margin-bottom: 0.6rem; */
+        top: -10px;
+        position: relative;
 }
 
-.left-container-location-details {
-    flex: 3;
-    text-align: center;
+// .left-container-location-details {
+//     flex: 3;
+//     text-align: center;
 
-}
+// }
 
-.left-container-location-img img {
-    height: 160px;
-    width: 100%;
-    border-radius: 1rem;
-}
+// .left-container-location-img img {
+//     height: 10rem;
+//     width: 100%;
+//     border-radius: 1rem;
+//     filter: blur(.6px);
+// }
 
 .left-container-location-name {
-    margin-top: -90px;
-    font-size: large;
+    // margin-top: -6rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: white;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 10;
+    border-radius: 1rem;
+    height: 10rem;
+    width: 100%;
+    // filter: blur(.6px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .deviding-line {
     height: 1px;
     width: 100%;
     background-color: #cccccc;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .left-container-temp-summery-img {
     margin-right: 8px;
 }
 
-.left-container-rain-stats-value {}
+// .left-container-rain-stats-value {}
 
 .left-container-rain-stats-img {
     margin-right: 8px;
@@ -154,14 +177,28 @@
 
 
 ///////////////////////////--------------------------------------------------------------
+/// 
+//
 
+@media(max-width: 1024px) {
+    .left-container-temp-img[_ngcontent-ng-c2797144164] img[_ngcontent-ng-c2797144164] {
+        width: 10rem;
+    }
 
+    .left-container-day-time[_ngcontent-ng-c2797144164] {
+        margin-top: 1.8rem;
+    }
 
+    .deviding-line[_ngcontent-ng-c2797144164] {
+        margin: 1rem 0;
+    }
 
+    .left-container-temp-summery[_ngcontent-ng-c2797144164] {
 
+        height: 2.4rem;
+    }
 
-
-
-.left-container-temp-img[_ngcontent-ng-c3306631031] img[_ngcontent-ng-c3306631031] {
-    width: 12rem;
+    .left-container-rain-stats[_ngcontent-ng-c2797144164] {
+        font-size: 1.4rem;
+    }
 }

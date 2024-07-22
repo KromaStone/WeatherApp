@@ -2,12 +2,13 @@ import { Component, } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMagnifyingGlass, faLocation, faCloud, faCloudRain } from '@fortawesome/free-solid-svg-icons';
 import { WeatherService } from '../service/weather.service';
+import { DividerModule } from 'primeng/divider';
 
 
 @Component({
   selector: 'app-left-container',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, DividerModule],
   templateUrl: './left-container.component.html',
   styleUrl: './left-container.component.scss'
 })

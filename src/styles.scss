@@ -7,8 +7,9 @@
     text-decoration: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Nunito", sans-serif;
+    font-family:"Poppins", "Nunito", sans-serif;
     line-height: 2rem;
+   
 }
 
 
@@ -18,4 +19,33 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #ffffff #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 0px;
+    border: 0px none #ffffff;
+}
+
+@media(max-width: 1024px) {
+*{
+    font-size: 80%;
+}
 }

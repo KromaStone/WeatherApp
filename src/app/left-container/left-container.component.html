@@ -1,7 +1,9 @@
 <div class="left-container">
+
     <div class="left-container-navbar">
         <div class="search-icon" (click)="onSearch(locationInput.value)">
-            <fa-icon class="fa-sm" [icon]="location"></fa-icon>        </div>
+            <fa-icon class="fa-sm" [icon]="location"></fa-icon>
+        </div>
         <div class="search-input">
             <input type="text" placeholder="Search place..." #locationInput
                 (keyup.Enter)="onSearch(locationInput.value)">
@@ -11,46 +13,57 @@
 
         </div>
     </div>
+
+
     <div class="left-container-data-box">
         <div class="left-container-temp-data">
             <div class="left-container-temp-img">
-                <!-- <img src="{{this.weatherService.temperatureData.summeryImg}}" alt="Img"> -->
-                <img src="../../assets/images/cloudysun.png" alt="Img">
-
-            </div>
-            <div class="left-container-temp-value">{{weatherService.celsius== true?
-                this.weatherService.temperatureData.temperature:
-                weatherService.celsiusToFahrenheit(this.weatherService.temperatureData.temperature)}}
-                25<sup>°{{this.weatherService.celsius==true?
-                    "C":"F"}}</sup></div>
-            <div class="left-container-day-time">{{this.weatherService.temperatureData.day}} <span>
-                    {{this.weatherService.temperatureData.time}} 07:20
-                </span>
+                <img src="{{this.weatherService.temperatureData.summeryImg}}" alt="Img">
+                <!-- <img src="../../assets/images/cloudysun.png" alt="Img"> -->
             </div>
         </div>
-        <div class="deviding-line">
+        <!-- <div class="left-container-other-details">
 
+        </div> -->
+    </div>
+
+
+
+
+
+
+    <div class="left-container-temp-value">{{weatherService.celsius== true?
+        this.weatherService.temperatureData.temperature:
+        weatherService.celsiusToFahrenheit(this.weatherService.temperatureData.temperature)}}
+        <sup>°{{this.weatherService.celsius==true?
+            "C":"F"}}</sup></div>
+    <div class="left-container-day-time">{{this.weatherService.temperatureData.day}} <span>
+            {{this.weatherService.temperatureData.time}} 
+        </span>
+
+    </div>
+    <div class="deviding-line"></div>
+
+    <div class="left-container-temp-summery">
+        <div class="left-container-temp-summery-img"> <fa-icon class="fa-sm" [icon]="cloud"></fa-icon>
         </div>
-        <div class="left-container-other-details">
-            <div class="left-container-temp-summery">
-                <div class="left-container-temp-summery-img"> <fa-icon class="fa-sm" [icon]="cloud"></fa-icon>
-                </div>
-                <div class="left-container-temp-summery-value">{{this.weatherService.temperatureData.summeryPhrase}}
-                    Mostly Cloudy
-                </div>
-            </div>
-            <div class="left-container-rain-stats">
-                <div class="left-container-rain-stats-img">
-                    <fa-icon class="fa-sm" [icon]="rain"></fa-icon>
-                </div>
-                <div class="left-container-rain-stats-value">{{this.weatherService.temperatureData.rainPercent}} 25%
-                </div>
-            </div>
-            <div class="left-container-location-details">
-                <div class="left-container-location-img"><img src="./../../assets/images/city.avif" alt=""></div>
-                <div class="left-container-location-name">{{this.weatherService.temperatureData.location}} Pune, India
-                </div>
-            </div>
+        <div class="left-container-temp-summery-value">{{this.weatherService.temperatureData.summeryPhrase}}
+       
+        </div>
+    </div>
+
+    <div class="left-container-rain-stats">
+        <div class="left-container-rain-stats-img">
+            <fa-icon class="fa-sm" [icon]="rain"></fa-icon>
+        </div>
+        <div class="left-container-rain-stats-value">{{this.weatherService.temperatureData.rainPercent}} %
+        </div>
+    </div>
+
+    <div class="left-container-location-details">
+        <!-- <div class="left-container-location-img"><img src="./../../assets/images/city.avif" alt=""></div> -->
+        <div class="left-container-location-name" style="background-image: url('./../../assets/images/city.jpg');">
+            {{this.weatherService.temperatureData.location}} 
         </div>
     </div>
 </div>

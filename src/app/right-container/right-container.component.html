@@ -24,7 +24,7 @@
         <div class="right-container-week-cards" *ngIf="weatherService.week==true">
 
 
-            <!-- <div class="card" *ngFor="let card of weatherService.weekData">
+            <div class="card" *ngFor="let card of weatherService.weekData">
                 <div class="card-day">{{card.day}}</div>
                 <div class="card-temp-img">
                     <img src="{{card.summeryImage}}" alt="Img">
@@ -42,104 +42,15 @@
                         "C":"F"}}
                     </span>
                 </div>
-            </div> -->
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
             </div>
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">Mon</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudy.png" alt="Img">
-                </div>
-                <div class="card-temp-value">
-                    <span class="temp-max">
-                        25°F </span>
-                    <span class="temp-min">
-                        12°F
-                    </span>
-                </div>
-            </div>
+           
+       
 
         </div>
 
 
         <div class="right-container-today-cards" *ngIf="weatherService.today==true">
-            <!-- <div class="card" *ngFor="let  card of this.weatherService.todayData">
+            <div class="card" *ngFor="let  card of this.weatherService.todayData">
                 <div class="card-day">{{card.time}}</div>
                 <div class="card-temp-img">
                     <img src="{{card.summaryImage}}" alt="">
@@ -151,86 +62,10 @@
                     °{{this.weatherService.celsius==true?
                     "C":"F"}}
                 </div>
-            </div> -->
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
             </div>
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-day">01:55</div>
-                <div class="card-temp-img">
-                    <img src="../../assets/cloudysun.png" alt="">
-                </div>
-                <div class="card-temp-value">
-                    15
-                    °{{this.weatherService.celsius==true?
-                    "C":"F"}}
-                </div>
-            </div>
+           
+       
         </div>
-
 
 
 
@@ -274,7 +109,7 @@
                                 <img src="../../assets/images/sunrise.png" alt="">
                             </div>
                             <div class="sunrise-time">
-                                {{weatherService.todaysHighlights.sunRise}} AM
+                                {{weatherService.todaysHighlights.sunRise}}  AM
                             </div>
                         </div>
                         <div class="sunset">
@@ -282,7 +117,7 @@
                                 <img src="../../assets/images/sunset.png" alt="">
                             </div>
                             <div class="sunset-time">
-                                {{weatherService.todaysHighlights.sunSet}} PM
+                                {{weatherService.todaysHighlights.sunSet}}  PM
                             </div>
                         </div>
                     </div>
@@ -293,7 +128,7 @@
                     <div class="right-container-today-heighlight-card-title">
                         Humidity
                     </div>
-                    <div class="title-value">{{this.weatherService.todaysHighlights.humidity}}<sup>%</sup></div>
+                    <div class="title-value">{{this.weatherService.todaysHighlights.humidity}} %</div>
                     <div class="title-check">
 
                         {{ this.weatherService.todaysHighlights.humidity > 50 ? 'high' : '' }} {{
@@ -306,7 +141,7 @@
                         <div class="right-container-today-heighlight-card-title">
                             Vasibility
                         </div>
-                        <div class="title-value">{{weatherService.todaysHighlights.visibility}}<sub>km</sub></div>
+                        <div class="title-value">{{weatherService.todaysHighlights.visibility}} km</div>
                         <div class="title-check">
 
 
@@ -340,3 +175,4 @@
                     </div>
 
                 </div>
+            </div>

@@ -14,7 +14,7 @@ import { environment } from '../environment/environment';
 })
 
 export class WeatherService {
-
+  loading: boolean = true;
   currentTime: Date;
   cityName: string = 'Chandigarh';
   language: string = 'en-US';
@@ -51,6 +51,7 @@ export class WeatherService {
   }
 
   getData() {
+    this.loading= true
     this.todayData = [];
     this.weekData = []
     this.temperatureData = new TempData;
@@ -74,6 +75,7 @@ export class WeatherService {
         })
       }
     });
+    this.loading=false
   }
 
   getlocationDetails(cityName: string, language: string): Observable<locationDetails> {
