@@ -8,13 +8,14 @@ import { WeekData } from '../modal/weekData';
 import { TodaysHighlight } from '../modal/todaysHighlight';
 import { Observable } from 'rxjs';
 import { environment } from '../environment/environment';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class WeatherService {
-  loading: boolean = true;
+  loading: boolean;
   currentTime: Date;
   cityName: string = 'Chandigarh';
   language: string = 'en-US';
@@ -51,7 +52,7 @@ export class WeatherService {
   }
 
   getData() {
-    this.loading= true
+    this.loading = true
     this.todayData = [];
     this.weekData = []
     this.temperatureData = new TempData;
@@ -59,26 +60,33 @@ export class WeatherService {
     var latitude = 0;
     var longitude = 0;
 
-    this.getlocationDetails(this.cityName, this.language).subscribe({
-      //next use to get valid data , it will neglect null values
-      next: (reponse) => {
-        this.locationDetails = reponse
-        latitude = this.locationDetails?.location.latitude[0];
-        longitude = this.locationDetails?.location.latitude[0];
+    this.getlocationDetails(this.cityName, this.language).subscribe(
+      {//next use to get valid data , it will neglect null values
+        next: (reponse) => {
+          this.loading = true
+          this.locationDetails = reponse
+          latitude = this.locationDetails?.location.latitude[0];
+          longitude = this.locationDetails?.location.latitude[0];
+          this.getWeatherReport(this.date, latitude, longitude, this.language, this.units).subscribe({
+            next: (response) => {
+              this.weatherDetails = response;
+              this.prepereData();
+              this.loading = false;
 
-        this.getWeatherReport(this.date, latitude, longitude, this.language, this.units).subscribe({
-          next: (response) => {
-            this.weatherDetails = response;
-            this.prepereData();
-
+            }
           }
-        })
+          )
+        }
       }
-    });
-    this.loading=false
+    );
+    this.loading = false;
+
   }
 
+
+
   getlocationDetails(cityName: string, language: string): Observable<locationDetails> {
+    this.loading = true;
     return this.httpClient.get<locationDetails>(environment.locationbaseURL,
       {
         headers: new HttpHeaders()
@@ -92,6 +100,8 @@ export class WeatherService {
   }
 
   getWeatherReport(date: string, latitude: number, longitude: number, language: string, units: string): Observable<weatherDetails> {
+    this.loading = true
+
     return this.httpClient.get<weatherDetails>(environment.forcastBaseURL, {
       headers: new HttpHeaders()
         .set(environment.xRapidapiKeyname, environment.xRapidapiKeyValue)

@@ -2,7 +2,9 @@
 <div class="app-container" *ngIf="weatherService.loading==false">
     <div class="weather-container">
         <div class="left-container">
+            kk{{weatherService.loading}}
             <app-left-container />
+
         </div>
         <div class="right-container">
             <app-right-container />
@@ -11,14 +13,17 @@
 </div>
 
 <!-- *ngIf="weatherService.week==true" -->
-
-<div class="lds-roller" *ngIf="weatherService.loading==true">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+<!-- *ngIf="weatherService.loading==true" -->
+<div class="loader-container" *ngIf="weatherService.loading==true">
+    
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </div>

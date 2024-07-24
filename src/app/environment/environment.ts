@@ -20,7 +20,7 @@ export const environment = {
     
     // all fake data------------------------------------------------------------------------------------------------------
     
-    // // base url for location 
+    // base url for location 
     // locationbaseURL: 'https://wweather338.p.rapidapi.com/locations/search?',
 
     // // base url for day wise forecast
